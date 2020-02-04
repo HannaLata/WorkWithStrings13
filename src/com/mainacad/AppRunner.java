@@ -3,6 +3,7 @@ package com.mainacad;
 import com.mainacad.service.NumberManipulationService;
 import org.apache.commons.lang3.StringUtils;
 
+import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class AppRunner {
@@ -10,6 +11,14 @@ public class AppRunner {
     private static final Logger LOGGER = Logger.getLogger(AppRunner.class.getName());
 
     public static void main(String[] args) {
+
+        System.out.println("Input number");
+
+        String input = "";
+        Scanner scanner = new Scanner(System.in);
+        input = scanner.nextLine();
+
+        LOGGER.info(("Input: " + input));
 
         LOGGER.info("Some info text");
         LOGGER.warning("Some warning text");
